@@ -1,0 +1,84 @@
+.colour {
+	height: 100%;
+	flex: 1;
+	text-transform: uppercase;
+	color: rgba(255, 255, 255, 0.4);
+	font-size: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+	text-decoration: none;
+	transition: 0.5s ease;
+	border: 5px solid rgba(255, 255, 255, 0.05);
+}
+
+.colour:hover {
+	border: 5px solid rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.copied {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	opacity: 0;
+	text-decoration: none;
+	color: rgba(255, 255, 255, 0.4);
+	height: 100%;
+	width: 100%;
+	justify-content: center;
+	text-align: center;
+	pointer-events: none;
+}
+
+.copied h1 {
+	font-size: 17vw;
+	margin: auto 0 0 0;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.copied p {
+	font-size: 2vw;
+	text-transform: capitalize;
+	margin: 0 0 auto 0;
+	font-size: 35px;
+}
+
+.colour:focus .copied {
+	animation: copied 3s 1;
+}
+
+.colour:focus .copied h1 {
+	animation: copied2 3s 1;
+	animation-timing-function: cubic-bezier(0.08, 1.65, 0.51, 0.8);
+}
+
+@keyframes copied {
+	0% {
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes copied2 {
+	0% {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	3% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
